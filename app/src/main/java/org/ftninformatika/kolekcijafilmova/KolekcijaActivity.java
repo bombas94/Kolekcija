@@ -114,7 +114,7 @@ public class KolekcijaActivity extends AppCompatActivity implements AdapterLista
             adapterLista.removeAll();
             adapterLista.notifyDataSetChanged();
 
-            String tekstNotifikacije = "Repertoar obrisan";
+            String tekstNotifikacije = "Kolekcija obrisana";
             boolean toast = prefs.getBoolean(getString(R.string.toast_key), false);
             boolean notif = prefs.getBoolean(getString(R.string.notif_key), false);
 
@@ -147,8 +147,8 @@ public class KolekcijaActivity extends AppCompatActivity implements AdapterLista
     public void onItemClick(int position) {
         Filmovi film = adapterLista.get(position);
 
-        String tekstNotifikacije = "Projekcija u " + film.getmVreme() + " za " + film.getmNaziv() +
-                " je uspesno reservisana";
+        String tekstNotifikacije = "Prikaz" + film.getmVreme() + " za " + film.getmNaziv() +
+                " je uspesno nadjen";
 
         boolean toast = prefs.getBoolean(getString(R.string.toast_key), false);
         boolean notif = prefs.getBoolean(getString(R.string.notif_key), false);
